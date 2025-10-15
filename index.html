@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greenfield Public School</title>
+  <meta name="description" content="Greenfield Public School — Excellence in learning, caring community." />
+  <style>
+    /* Simple modern responsive styling */
+    :root {
+      --accent: #0b74de;
+      --muted: #6b7280;
+      --bg: #f7fafc;
+      --card: #ffffff;
+      --radius: 14px;
+      --glass: rgba(255, 255, 255, 0.6);
+      --maxw: 1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #f8fafc, #ffffff);
+      color: #0f172a
+    }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 28px
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 20px
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      align-items: center
+    }
+
+    nav a {
+      color: inherit;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 8px
+    }
+
+    nav a:hover {
+      background: var(--glass)
+    }
+
+    .cta {
+      background: var(--accent);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 28px;
+      align-items: center;
+      padding: 36px 0
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      margin: 0 0 12px
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin: 0 0 18px
+    }
+
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(12, 12, 12, 0.06)
+    }
+
+    .stats {
+      display: flex;
+      gap: 12px
+    }
+
+    .stat {
+      flex: 1;
+      text-align: center
+    }
+
+    .stat h3 {
+      margin: 6px 0
+    }
+
+    /* Sections */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+
+    .feature {
+      padding: 18px
+    }
+
+    .events {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    footer {
+      padding: 24px 0;
+      color: var(--muted)
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px
+    }
+
+    /* Responsive */
+    @media (max-width:900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .gallery {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    @media (max-width:600px) {
+      header {
+        padding: 12px
+      }
+
+      nav {
+        display: none
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* Mobile nav toggle */
+    .mobile-toggle {
+      display: none
+    }
+
+    @media (max-width:600px) {
+      .mobile-toggle {
+        display: block
+      }
+    }
+
+    .hero-illustration {
+      border-radius: 12px;
+      overflow: hidden
+    }
+
+    /* Contact form */
+    form {
+      display: grid;
+      gap: 8px
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #e6eef8
+    }
+
+    button {
+      padding: 10px;
+      border-radius: 10px;
+      border: 0;
+      background: var(--accent);
+      color: white
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">GF</div>
+        <div>
+          <strong>Greenfield Public School</strong>
+          <div style="font-size:12px;color:var(--muted)">Where learning meets care</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="cta">Contact Us</a>
+      </nav>
+      <button class="mobile-toggle" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div>
+          <h1>Welcome to Greenfield Public School</h1>
+          <p>Committed to academic excellence, character development and a joyful learning experience for every child.
+          </p>
+          <div style="display:flex;gap:12px">
+            <a href="#admissions" class="cta">Apply Now</a>
+            <a href="#about"
+              style="padding:10px 14px;border-radius:10px;background:transparent;border:1px solid #eef6fd;text-decoration:none;color:var(--accent)">Learn
+              More</a>
+          </div>
+
+          <div style="margin-top:22px;display:flex;gap:12px;align-items:center">
+            <div class="card" style="flex:1">
+              <strong>Open Admissions</strong>
+              <div style="font-size:13px;color:var(--muted)">2025-2026 academic year — limited seats in several classes
+              </div>
+            </div>
+            <div class="card" style="width:220px;text-align:center">
+              <div style="font-size:12px;color:var(--muted)">Next Open Day</div>
+              <div style="font-weight:700;font-size:20px">Sat, Nov 8, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-illustration card">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="Students" style="width:100%;height:100%;object-fit:cover;min-height:320px;border-radius:12px">
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:26px">
+        <div class="card">
+          <h2>About Us</h2>
+          <p style="color:var(--muted)">Greenfield Public School is a co-educational day school offering classes from
+            Kindergarten to Grade 12. We focus on balanced development — academics, sports, arts and life-skills.</p>
+          <div class="grid-3" style="margin-top:18px">
+            <div class="feature card">
+              <h3>Experienced Teachers</h3>
+              <p style="color:var(--muted)">Qualified, caring educators who focus on each student's growth.</p>
+            </div>
+            <div class="feature card">
+              <h3>Holistic Curriculum</h3>
+              <p style="color:var(--muted)">A blend of academics and co-curricular activities to foster creativity.</p>
+            </div>
+            <div class="feature card">
+              <h3>Safe Environment</h3>
+              <p style="color:var(--muted)">Secure campus, student counseling, and a supportive community.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="academics" style="margin-top:22px">
+        <div class="card">
+          <h2>Academics & Programs</h2>
+          <p style="color:var(--muted)">We offer a broad set of programs including STEM, Languages, Fine Arts, Sports
+            and Special Education support.</p>
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+            <div class="card" style="flex:1;min-width:200px">
+              <h4>Primary Years</h4>
+              <p style="color:var(--muted)">Foundation-level literacy and numeracy with activity-based learning.</p>
+            </div>
+            <div class="card" style="flex:1;min-width:200px">
+              <h4>Secondary</h4>
+              <p style="color:var(--muted)">Subject specialization, exam preparation and career guidance.</p>
+            </div>
+            <div class="card" style="flex:1;min-width:200px">
+              <h4>After-school Clubs</h4>
+              <p style="color:var(--muted)">Robotics, Debate, Music, Art and Sports coaching.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admissions" style="margin-top:22px">
+        <div class="card">
+          <h2>Admissions</h2>
+          <p style="color:var(--muted)">Apply online or visit us. For document checklist and fee structure, contact the
+            admissions office.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+            <div style="flex:1;min-width:260px" class="card">
+              <h4>How to Apply</h4>
+              <ol style="color:var(--muted)">
+                <li>Fill the application form below</li>
+                <li>Visit for assessment (if applicable)</li>
+                <li>Submit documents & admission fee</li>
+              </ol>
+            </div>
+            <div style="width:320px" class="card">
+              <h4>Quick Apply</h4>
+              <form onsubmit="event.preventDefault(); alert('Form submitted (demo). Replace with backend).')">
+                <input required placeholder="Student full name" />
+                <input required placeholder="Parent / Guardian name" />
+                <input required placeholder="Phone or email" />
+                <select>
+                  <option>Applying for</option>
+                  <option>Kindergarten</option>
+                  <option>Grade 1</option>
+                  <option>Grade 6</option>
+                </select>
+                <button type="submit">Submit Application</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" style="margin-top:22px">
+        <div class="card">
+          <h2>Gallery</h2>
+          <div class="gallery" style="margin-top:12px">
+            <img
+              src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+              alt="gallery">
+            <img
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+              alt="gallery">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+              alt="gallery">
+            <img
+              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+              alt="gallery">
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <div class="card">
+          <h2>Contact & Location</h2>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div style="flex:1;min-width:280px">
+              <p style="color:var(--muted)">Address: 12 Meadow Lane, Citytown — Phone: +91 98765 43210 — Email:
+                info@greenfield.edu</p>
+              <iframe title="map" src="https://www.google.com/maps?q=New+Delhi&output=embed"
+                style="width:100%;height:240px;border:0;border-radius:10px"></iframe>
+            </div>
+            <div style="width:380px" class="card">
+              <h4>Send a message</h4>
+              <form onsubmit="event.preventDefault();alert('Message sent (demo). Connect to backend to persist.')">
+                <input placeholder="Your name" required />
+                <input placeholder="Your email or phone" required />
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer style="margin-top:28px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>
+          <strong>Greenfield Public School</strong>
+          <div style="font-size:13px;color:var(--muted)">© 2025 Greenfield — All rights reserved</div>
+        </div>
+        <div style="color:var(--muted);font-size:13px">Follow us: Facebook · Twitter · Instagram</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu(btn) {
+      const nav = document.querySelector('nav');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (!expanded) {
+        nav.style.display = 'flex'; nav.style.position = 'absolute'; nav.style.right = '20px'; nav.style.top = '76px'; nav.style.background = 'white'; nav.style.padding = '12px'; nav.style.borderRadius = '10px'; nav.style.boxShadow = '0 8px 24px rgba(12,12,12,0.08)'
+      } else {
+        nav.style.display = 'none'; nav.style.position = ''; nav.style.right = ''; nav.style.top = ''; nav.style.background = ''; nav.style.padding = ''; nav.style.borderRadius = ''; nav.style.boxShadow = ''
+      }
+    }
+  </script>
+</body>
+
+</html>
